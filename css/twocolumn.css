@@ -1,0 +1,111 @@
+
+.map {
+  height: 500px;
+  width: 500px;
+  background-color: #b5d0d0;
+}
+#leftpanelcontent  {
+  	position:absolute; 
+	width: 50%;
+	height:600px;
+	padding-top:20px;
+	left:5px;
+ 	overflow: auto;
+   }
+	
+	   
+#rightpanelcontent  {
+	left:50%;
+	height:600px;
+	position:absolute; 
+	overflow: auto;
+	}
+
+
+#rightpanelcontent   p {
+	padding-bottom: 20px;
+	padding-top: 10px;
+	text-align: left;
+	
+/*	font-style:italic;*/
+	font-size: 1.05em; 
+/*	padding-bottom: 1em; */
+	width:90%; 
+	margin-left: auto;   
+	margin-right: auto;
+	 	}
+	
+.floatcenter
+{
+	/*position: float;*/
+	padding-top: 20px ;
+   text-align: center;
+	border-style: none;
+   text-decoration: none; 
+ 
+}	
+	   
+	.floatcenter_halfimage 
+{ 
+  /* position:float;*/
+/*   padding-top: 20px ;*/
+   padding-left: 20px ;
+   padding-right: 20px ;
+   text-align: center;
+	border-style: none;
+   text-decoration: none; 
+   /*width:250px;*/
+   width:40%;
+   
+	}	
+ .clear {
+	clear:both;
+}
+
+
+	
+ .slidenumber {
+ 	color:yellow;
+font-style: italic;
+    	}
+  	
+ .orangenumber {
+ 	color:orange;
+/*font-style: italic;*/
+    	}
+    	
+
+
+.slide p span {
+display:none;
+}   	
+
+ 	span.date {
+ 		font-size:1.1em;
+/* font-style:bold;*/
+ font-style: italic;
+ padding: 20px 20px 0px 0px ;
+}
+/* warning, use of these floats will cause text to flow around image */ 
+	.rmd_float_right
+		{
+			float: right;
+
+/* width: 200px;*/
+padding: 20px 20px 20px 20px ;
+	border-style: none;
+text-decoration: none; 
+		}
+	.rmd_float_left 
+	{
+		float: left;
+
+padding: 20px 20px 20px 20px ;
+
+	}	
+	
+	.paragraph_icon 
+{	padding: 0px 10px 0px 0px ;
+
+	}	
+	
