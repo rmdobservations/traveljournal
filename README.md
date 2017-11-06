@@ -9,3 +9,8 @@ about their trip. These should be:
 - Name of gpx file
 - number of gpx files (legs of a trip, one for each day)
 - text
+
+Requirements:
+- exiftool for extracting geolocation from photographs (https://www.sno.phy.queensu.ca/~phil/exiftool/)
+- jquery.js (https://jquery.com/)
+- Openlayers (https://github.com/openlayers/openlayers)
