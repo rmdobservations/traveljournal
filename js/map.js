@@ -1,19 +1,10 @@
-$(document).ready(function() {
-// add mouse position
- var mousePositionControl = new ol.control.MousePosition({
-        coordinateFormat: ol.coordinate.createStringXY(4),
-        projection: 'EPSG:4326',
-        // comment the following two lines to have the mouse position
-        // be placed within the map.
-        className: 'custom-mouse-position',
-        target: document.getElementById('mouse-position'),
-        undefinedHTML: '&nbsp;'
-      });
-      // style icon
+/*
+map.js
 
- /*var iconFeature = new ol.Feature({
-        geometry: new ol.geom.Point([0, 0])
-      });*/
+Created RMD 6 november 2017
+Modified RMD 6 november 2017 Put common code snippets into separate modules
+*/
+$(document).ready(function() {
 
  var iconStyle = {
  	'Point': new ol.style.Style({
@@ -47,20 +38,7 @@ $(document).ready(function() {
   src: 'images/redstar.png'
         })
           })
-       }
-      //iconFeature.setStyle(iconStyle);
-var earthquakeStyle = new ol.style.Style({
-  image: new ol.style.Icon({
-  anchor: [0.5, 0.5],
-  size: [52, 52],
-  offset: [52, 0],
-  opacity: 1,
-  scale: 0.25,
-  src: '../../assets/img/dots.png'
-  })
-  });
-// style gpx
-	
+ 
 	 var trackStyle = {
         'Point': new ol.style.Style({
           image: new ol.style.Circle({
@@ -194,17 +172,7 @@ var vector2 = new ol.layer.Vector({
           return dotStyle[feature.getGeometry().getType()];
         }
 	    	});
-	    	/*
-	    	var vector = new ol.layer.Vector({
-        source: new ol.source.Vector({
-          url: 'https://openlayers.org/en/v4.2.0/examples/data/gpx/fells_loop.gpx',
-          format: new ol.format.GPX()
-        }),
-        style: function(feature) {
-          return style[feature.getGeometry().getType()];
-        }
-      });
-      */
+	  
 var vectorLayer = new ol.layer.Group({
 			title: 'Vector Layer',
          layers: [vector1,vector3,vector4,vector5]

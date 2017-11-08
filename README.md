@@ -15,3 +15,11 @@ Requirements:
 - jquery.js (https://jquery.com/)
 - Openlayers (https://github.com/openlayers/openlayers)
 - OL3 layer switcher (https://github.com/walkermatt/ol3-layerswitcher) for menu layers
+
+Instructions: 
+- Copy (or extract) tripTemplate and all subfolders to a folder with the name which describes your trip.
+i.e. summer2017. 
+- cd summer2017 
+- edit map.html and replace title 
+- cd summer2017/js and replace central coordinates of new map.
+- cd summer2017/gfx and 

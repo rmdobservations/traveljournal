@@ -1,6 +1,6 @@
 # linux backup twiddle
 *~
-'.~lock.*'
+'.~lock.*.odt#'
  
 # do not include docs , Make sure no spaces 
 *.odt
