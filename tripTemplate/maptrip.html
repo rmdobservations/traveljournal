@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8"/>
  <title>Template Trip</title>
 <!-- CSS styling files -->  
 <link rel="stylesheet" href="../css/ol3-layerswitcher.css" />
@@ -10,12 +11,16 @@
  <script type="text/javascript" src="../js/ol.js"></script>
 
  <script  type="text/javascript" src="../js/ol3-layerswitcher.js"></script>
+ <script type="text/javascript"  src="../js/turf/turf.min.js"></script>
  <script  type="text/javascript" src="../js/jquery.js"></script> 
+<script  type="text/javascript" src="../js/togeojson.js"></script>
 <!-- subroutines --> 
+<script  type="text/javascript" src="../js/trackdistance.js"></script>
 
   <script  type="text/javascript" src="../js/subroutines.js"></script>
    <script  type="text/javascript" src="../js/olStyleTemplate.js"></script>
-     <script  type="text/javascript" src="../js/olVectorTemplate.js"></script>
+     <script  type="text/javascript" src="../js/olVectorWaypointTemplate.js"></script>
+      <script  type="text/javascript" src="../js/olVectorTrackTemplate.js"></script>
  <!-- Trip specific -->
  <script  type="text/javascript" src="js/initialize.js"></script> 
  <script  type="text/javascript" src="js/maptrip.js"></script>
@@ -30,9 +35,37 @@
 </div>
 
 <div id="rightpanelcontent">
+ <div id="distance"></div>
  <div id="mouse-position"></div>
+
 </div>
 
 </div>
+
+ 
+    <!-- 
+     <div id="popup" class="ol-popup">
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      <div id="popup-content"></div>
+    </div>
+    <div id="overlay" style="background-color: white; border-radius:
+10px; border: 1px solid black; padding: 5px 10px;">
+
+<div id="overlay" style="background-color: yellow; width: 20px;
+height: 20px; border-radius: 10px;">
+
+</div> -->
+    <!-- 
+    <h2>Links</h2>
+    <a href="https://www.mountainproject.com/" target="_blank">https://www.mountainproject.com/</a>
+    <a href="https://www.nps.gov/ciro/index.htm" target="_blank">https://www.nps.gov/ciro/index.htm</a>
+  
+  
+    <div id="info">&nbsp;</div>
+    <?php 
+	$info = exif_read_data('20170330_123303.jpg');
+	
+	var_dump($info);
+	?>   -->
 </body>
 </html>

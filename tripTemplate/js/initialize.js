@@ -2,9 +2,11 @@
 - projection for map
 -center of map 
 -zoom
+- KML or GPX
 - files with points and display properties
 - files with tracks and display properties
-
+Created RMDobservations 12 november 2017
+Modified: RMDobservations 15 november 2017 Removed gpx from variable names. 
 */
 function getProjection(){
 	return 'EPSG:4326';
@@ -27,10 +29,10 @@ function getZoom(){
 function getWaypointFileArray(){
 	
 	
-	var gpxArray = ['oct15.gpx','oct16.gpx','oct17.gpx'];
+	var waypointArray = ['gpx/waypoints/oct15.gpx','gpx/waypoints/oct16.gpx','gpx/waypoints/oct17.gpx'];
 	var waypointObj = {
 		'menutitle': 'Photo points',
-		'filearray' : gpxArray,
+		'filearray' : waypointArray,
 		'symbolstyle': redstarStyle
 
 		}
@@ -39,10 +41,10 @@ function getWaypointFileArray(){
 // tracks
 function getTrackFileArray(){
 
-	var gpxArray = ['triptrackD.gpx','triptrackE.gpx'];
+	var trackArray =  ['gpx/tracks/oct15track.gpx','gpx/tracks/oct16track.gpx','gpx/tracks/oct17track.gpx'];
 	var trackObj = {
 		'menutitle': 'Bike Route',
-		'filearray': gpxArray,
+		'filearray': trackArray,
 		'trackstyle': trackStyle	
 		}
 	return trackObj;

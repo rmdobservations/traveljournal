@@ -1,7 +1,7 @@
 # traveljournal
 Create a template travel journal website. Structure is pre-written. Additions from one's trip can be easily added as 
 GPX or KML files.
-What makes a good travel journal: Text, Photographs, Map, Menu 
+What makes a good travel journal: Text, Photographs, Map, Distances, Menu ,popup photos on map markers
 
 Map software is Openlayers 3. Code is written so that one needs to fill in only a minimal amount of information
 about their trip. These should be:
@@ -15,6 +15,8 @@ Requirements:
 - jquery.js (https://jquery.com/)
 - Openlayers (https://github.com/openlayers/openlayers)
 - OL3 layer switcher (https://github.com/walkermatt/ol3-layerswitcher) for menu layers
+- turf.min.js (https://github.com/Turfjs/turf) for distance measurements 
+- mapbox/togeojson (https://github.com/mapbox/togeojson) for distance measurements using kml,gpx files 
 
 Instructions: 
 - Copy (or extract) tripTemplate and all subfolders to a folder with the name which describes your trip.
@@ -36,6 +38,9 @@ In order to use common files
 	js/ files used for all trips
 		subroutines.js contains snippets
 		olStyleTemplate.js Fills in all code that does NOT have to change for each  trip, ie default point style.
+		olVectorWaypointTemplate.js 
+		olVectorTrackTemplate.js  includes distance measurement
+		trackdistance.js Get distance of a track
 	css/ styling common to all trips
 --triptemplate 
 	js/ 

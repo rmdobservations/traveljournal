@@ -67,7 +67,7 @@ map.addControl(layerSwitcher);
 /* Fetch waypoints  */
 
 var waypointObj = getWaypointFileArray(mapProjection);
-console.log('waypoint style: ',)
+console.log('waypoint style: ',waypointObj['symbolstyle'])
 console.log("Check array of filenames: ",waypointObj['filearray'])
 var waypoints = waypointObj['filearray'];
 
@@ -75,8 +75,8 @@ var waypointLayerArray=[];
 
 for (var i=0;i< waypoints.length;i++)
 {
-	filename = "gpx/waypoints/" + waypoints[i];
-	waypointLayerArray.push(olVectorTemplate(waypoints[i],filename,mapProjection,waypointObj['symbolstyle']));
+filename = waypoints[i];
+	waypointLayerArray.push(olVectorWaypointTemplate(filename,mapProjection,waypoints[i],waypointObj['symbolstyle']));
 }
 
 
@@ -89,15 +89,17 @@ var waypointLayer = new ol.layer.Group({
 /* Fetch tracks  */
 
 var trackObj = getTrackFileArray(mapProjection);
-console.log("Check array of filenames: ",tracks);
+
 
 var tracks = trackObj['filearray'];
+console.log("Check array of filenames: ",tracks);
 var tracksLayerArray=[];
 
 for (var i=0;i< tracks.length;i++)
 {
-	filename = "gpx/tracks/" + tracks[i];
-	tracksLayerArray.push(olVectorTemplate(tracks[i],filename,mapProjection,trackObj['trackstyle']));
+	filename =  tracks[i];
+	tracksLayerArray.push(olVectorTrackTemplate(filename,mapProjection,tracks[i],trackObj['trackstyle']));
+	
 }
 
   var trackLayer = new ol.layer.Group({
@@ -106,6 +108,9 @@ for (var i=0;i< tracks.length;i++)
          })       
 
 overlayGroup.getLayers().push(trackLayer);
+
 overlayGroup.getLayers().push(waypointLayer);
+
+
 });
 
